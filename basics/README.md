@@ -61,7 +61,7 @@ Whenever you are done in the python command line, you can simply type the follow
 ```shell 
 exit()
 ```
-[Example: Hello World](../blob/main/basics/01_helloWorld.py)
+[Example: Hello World](../basics/01_helloWorld.py)
 
 ### Variables
 Variables are containers for storing data values.
@@ -80,7 +80,7 @@ age = 24 # age is of type int
 age = "Twenty Four" # age is of type str
 print(age) # Twenty Four
 ```
-[Example: Variables](../blob/main/basics/01_helloWorld.py/02_variables)
+[Example: Variables](../basics/01_helloWorld.py/02_variables)
 
 ### Data types
 Built-in Data Types
@@ -108,10 +108,20 @@ Casting in python is therefore done using constructor functions:
 - `float()`: - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
 - `str()`: - constructs a string from a wide variety of data types, including strings, integer literals and float literals  
 
-[Example: Casting](../blob/main/basics/03_casting.py)
+[Example: Casting](../basics/03_casting.py)
 
-### Lists 
-Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are **Tuple**, **Set**, and **Dictionary**, all with different qualities and usage.  
+### Python Collections (Arrays)
+There are four collection data types in the Python programming language:
+
+- **List** is a collection which is ordered and changeable. Allows duplicate members.
+- **Tuple** is a collection which is ordered and unchangeable. Allows duplicate members.
+- **Set** is a collection which is unordered and unindexed. No duplicate members.
+- **Dictionary** is a collection which is unordered and changeable. No duplicate members. 
+
+When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.
+
+#### Lists 
+Lists are used to store multiple items in a single variable.   
 Lists are created using square brackets:
 ```python 
 numbers = [1, 2, 3, 4, 5]
@@ -123,21 +133,69 @@ vegitables = list(('Cauliflower', 'Potato', 'Broccoli', 'Cabbage'))
 - **Changeable** The list is changeable, meaning that we can change, add, and remove items in a list after it has been created. 
 - **Allow Duplicates** The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
 
-[Example: Lists](../blob/main/basics/04_lists.py)
-
 A list can contain different data types:
 
 ```python
 randomList = ["Aakrit Subedi", 24, True, 69.69, "male"]
 print(type(randomList)) # <class 'list'>
 ```
+[Example: Lists](../basics/04_lists.py)
 
-### Python Collections (Arrays)
-There are four collection data types in the Python programming language:
+#### Tuples
+Tuples are used to store multiple items in a single variable. A tuple is a collection which is ordered and unchangeable. 
+```python
+fruits = ("apple", "banana", "cherry")
+# use a constructor
+numbers = tuple((1,2,3,4,5,6,7,8,9))
+```
+- **Ordered** The tuples are ordered, it means that the items have a defined order, and that order will not change.
+- **Unchangeable** Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+- **Allow Duplicates** Since tuple are indexed, tuples can have items with the same value.
 
-- **List** is a collection which is ordered and changeable. Allows duplicate members.
-- **Tuple** is a collection which is ordered and unchangeable. Allows duplicate members.
-- **Set** is a collection which is unordered and unindexed. No duplicate members.
-- **Dictionary** is a collection which is unordered and changeable. No duplicate members. 
+**Note:** Tuple items can be of any data type and can contain different data types.
+```python
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)
+tuple4 = ("abc", 34, True, 40, "male")
+```
 
-When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.
+[Example: Tuples](../basics/05_tuples.py)
+
+#### Sets
+Sets are used to store multiple items in a single variable. A set is a collection which is both unordered and unindexed. Sets are written with curly brackets.
+```python
+myset = {"apple", "banana", "cherry"}
+```
+- **Unordered** Unordered means that the items in a set do not have a defined order. Set items can appear in a different order every time you use them, and cannot be referred to by index or key. 
+- **Unchangeable** Sets are unchangeable, meaning that we cannot change the items after the set has been created.
+- **Duplicates Not Allowed** Sets cannot have two items with the same value.
+
+**Note:** Sets items can be of any data type and can contain different data types.
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {1, 5, 7, 9, 3}
+set3 = {True, False, False}
+set4 = {"abc", 34, True, 40, "male"}
+```
+
+[Example: Tuples](../basics/06_sets.py)
+
+#### Dictionaries 
+Dictionaries are used to store data values in key:value pairs. A dictionary is a collection which is unordered, changeable and does not allow duplicates. Dictionaries are written with curly brackets, and have keys and values:
+```python 
+myInfo = {
+  "name": "Aakrit Subedi",
+  "college": "Kantipur Engineering College",
+  "dob": "1996-04-09"
+}
+print(myInfo)
+```
+- Dictionary items are unordered, changeable, and does not allow duplicates. 
+- Dictionary items are presented in key:value pairs, and can be referred to by using the key name. 
+```python 
+print(myInfo["name"]) # Aakrit Subedi
+print(myInfo["college"]) # Kantipur Engineering College
+```
+
+[Example: Tuples](../basics/07_dictionaries.py)
