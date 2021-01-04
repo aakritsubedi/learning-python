@@ -61,6 +61,7 @@ Whenever you are done in the python command line, you can simply type the follow
 ```shell 
 exit()
 ```
+[Example: Hello World](../blob/main/basics/01_helloWorld.py)
 
 ### Variables
 Variables are containers for storing data values.
@@ -79,6 +80,7 @@ age = 24 # age is of type int
 age = "Twenty Four" # age is of type str
 print(age) # Twenty Four
 ```
+[Example: Variables](../blob/main/basics/01_helloWorld.py/02_variables)
 
 ### Data types
 Built-in Data Types
@@ -106,4 +108,36 @@ Casting in python is therefore done using constructor functions:
 - `float()`: - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
 - `str()`: - constructs a string from a wide variety of data types, including strings, integer literals and float literals  
 
+[Example: Casting](../blob/main/basics/03_casting.py)
 
+### Lists 
+Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are **Tuple**, **Set**, and **Dictionary**, all with different qualities and usage.  
+Lists are created using square brackets:
+```python 
+numbers = [1, 2, 3, 4, 5]
+fruits = ['Apples', 'Oranges', 'Grapes', 'Pears']
+# use a constructor
+vegitables = list(('Cauliflower', 'Potato', 'Broccoli', 'Cabbage'))
+```
+- **Ordered** The python lists are ordered, it means that the items have a defined order, and that order will not change. 
+- **Changeable** The list is changeable, meaning that we can change, add, and remove items in a list after it has been created. 
+- **Allow Duplicates** The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+
+[Example: Lists](../blob/main/basics/04_lists.py)
+
+A list can contain different data types:
+
+```python
+randomList = ["Aakrit Subedi", 24, True, 69.69, "male"]
+print(type(randomList)) # <class 'list'>
+```
+
+### Python Collections (Arrays)
+There are four collection data types in the Python programming language:
+
+- **List** is a collection which is ordered and changeable. Allows duplicate members.
+- **Tuple** is a collection which is ordered and unchangeable. Allows duplicate members.
+- **Set** is a collection which is unordered and unindexed. No duplicate members.
+- **Dictionary** is a collection which is unordered and changeable. No duplicate members. 
+
+When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.
